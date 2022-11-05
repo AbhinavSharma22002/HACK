@@ -1,5 +1,4 @@
-
-    const { Server } = require('socket.io');
+const { Server } = require('socket.io');
     let IO;
 
     module.exports.initIO = (httpServer) => {
@@ -25,18 +24,6 @@
                     caller: socket.user,
                     rtcMessage: rtcMessage
                 })
-
-            })
-
-            socket.on('answerCall', (data) => {
-                let caller = data.caller;
-                rtcMessage = data.rtcMessage
-
-                socket.to(caller).emit("callAnswered", {
-                    callee: socket.user,
-                    rtcMessage: rtcMessage
-                })
-
             })
 
             socket.on('ICEcandidate', (data) => {
