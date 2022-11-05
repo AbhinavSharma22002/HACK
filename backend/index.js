@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(Cors());
 const fetchUser = require('./middleware/fetchUser');
+const TeachableMachine = require("@sashido/teachablemachine-node");
 
 require('dotenv').config({path:__dirname+'/bin/.env'});
 
@@ -18,13 +19,26 @@ const indexRouter = require("./routers/index");
 
 app.use('/',indexRouter);
 
+const model = new TeachableMachine({
+    modelUrl:"https://teachablemachine.withgoogle.com/models/5JNAHeUO-/"
+});
 app.post("/users/",fetchUser,(req,res)=>{
     // io.on('connection' , (socket)=>{
     //     socket.on('newUser' , (id)=>{
             
     //     });
     // });
-    
+    // model.classfiy({
+    //     imageUrl: url
+    // }).then((predictions)=>{
+    //     console.log(predictions);
+    //     return res.json(predictions);
+    // }).catch((e)=>{
+    //     console.error(e);
+    //     res.status(500).send("Something went wrong");
+    // });
+
+
 });
 
 
