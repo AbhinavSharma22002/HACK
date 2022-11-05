@@ -11,7 +11,7 @@ const UserSchema = new Schema({
         required: true
     },
     permissions: {
-        type: Boolean,
+        type: String,
         required: true
     },
     adharCard: {
