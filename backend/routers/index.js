@@ -8,6 +8,10 @@ const jwt = require('jsonwebtoken');
 router.get("/",(req,res)=>{
     res.status(200).send("HELLO world");
 });
+
+router.get("/socket.io/socket.io.js",(req,res)=>{
+    res.sendFile(__dirname+"/../node_modules/socket.io/client-dist/socket.io.js");
+});
 router.post("/register",async (req,res)=>{
 
     let {name,location,permission,adharcard} = req.body;
