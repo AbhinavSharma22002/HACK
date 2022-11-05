@@ -19,9 +19,9 @@ const indexRouter = require("./routers/index");
 
 app.use('/',indexRouter);
 
-const model = new TeachableMachine({
-    modelUrl:"https://teachablemachine.withgoogle.com/models/5JNAHeUO-/"
-});
+// const model = new TeachableMachine({
+//     modelUrl:"https://teachablemachine.withgoogle.com/models/5JNAHeUO-/"
+// });
 app.post("/users/",fetchUser,(req,res)=>{
     model.classfiy({
         imageUrl: url

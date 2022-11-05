@@ -10,7 +10,8 @@ router.get("/",(req,res)=>{
 });
 
 router.get("/socket.io/socket.io.js",(req,res)=>{
-    res.sendFile(__dirname+"/../node_modules/socket.io/client-dist/socket.io.js");
+    var path = require('path');
+res.sendFile(path.resolve(__dirname+"/../node_modules/socket.io/client-dist/socket.io.js"));
 });
 router.post("/register",async (req,res)=>{
 
