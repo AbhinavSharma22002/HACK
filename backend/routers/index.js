@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 
 router.get("/",(req,res)=>{
     res.status(200).send("HELLO world");
-})
+});
 router.post("/register",
 [
     body("name","Enter valid Name").isLength({min:5})
