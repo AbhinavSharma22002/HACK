@@ -15,8 +15,8 @@ router.post("/register",async (req,res)=>{
 
         let user = await User.findOne({adharcard});
 
-        if(user!==null){
-            res.status(400).json({"error":"please try some other email"});
+        if(user!==null && user.adharCard===adharcard){
+            res.status(400).json({"error":"please try some other credentials"});
             return;
         }
         
