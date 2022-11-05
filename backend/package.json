@@ -1,0 +1,23 @@
+{
+  "name": "haskcbs",
+  "version": "1.0.0",
+  "description": "hackathon project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhinavSharma22002/HACK.git"
+  },
+  "keywords": [
+    "hack"
+  ],
+  "author": "Abhinav Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbhinavSharma22002/HACK/issues"
+  },
+  "homepage": "https://github.com/AbhinavSharma22002/HACK#readme"
+}
