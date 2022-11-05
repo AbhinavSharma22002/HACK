@@ -28,15 +28,15 @@ app.post("/users/",fetchUser,(req,res)=>{
             
     //     });
     // });
-    // model.classfiy({
-    //     imageUrl: url
-    // }).then((predictions)=>{
-    //     console.log(predictions);
-    //     return res.json(predictions);
-    // }).catch((e)=>{
-    //     console.error(e);
-    //     res.status(500).send("Something went wrong");
-    // });
+    model.classfiy({
+        imageUrl: url
+    }).then((predictions)=>{
+        console.log(predictions);
+        return res.json(predictions);
+    }).catch((e)=>{
+        console.error(e);
+        res.status(500).send("Something went wrong");
+    });
 
 
 });

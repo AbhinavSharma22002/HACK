@@ -130,7 +130,7 @@ h6 {
   position: absolute;
   right: -137%;
   bottom: 65%;
-  content: "GRAPHIC DESIGN | WEB DEVELOPMENT";
+  content: "Violence is never a good answer";
   font-size: 18pt;
   text-transform: uppercase;
   white-space: nowrap;
@@ -144,7 +144,7 @@ h6 {
   right: -140%;
   bottom: 45%;
   color: white;
-  content: "lakeworks";
+  content: "🔱Shastra";
   font-size: 70pt;
   text-shadow: 1px 1px 10px lawngreen;
   text-transform: uppercase;
@@ -429,7 +429,7 @@ h6 {
   width: 0px;
   height: 0px;
   height: auto;
-  content: "FLAKEWORKS";
+  content: "SHASTRA";
   writing-mode: vertical-lr;
   color: lawngreen;
   transition: all 0.3s ease-in-out;
@@ -630,7 +630,7 @@ h6 {
 }
 
 .item-card > div > picture::before {
-  content: "DESIGN + CODE";
+  
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -659,15 +659,15 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio-item:nth-child(2) > .item-card > div > picture::before {
-  content: "MAKE AN IMPRESSION";
+/* .portfolio-item:nth-child(2) > .item-card > div > picture::before {
+  
 }
 
 .portfolio-item:nth-child(3) > .item-card > div > picture::before {
-  content: "GET SOCIAL";
-}
+  ;
+} */
 
-.portfolio-item:nth-child(4) > .item-card > div > picture::before {
+/* .portfolio-item:nth-child(4) > .item-card > div > picture::before {
   content: "BE RECOGNIZED";
 }
 
@@ -677,7 +677,7 @@ h6 {
 
 .portfolio-item:nth-child(6) > .item-card > div > picture::before {
   content: "HTML/CSS";
-}
+} */
 
 .item-card > div > picture::after {
   position: absolute;
