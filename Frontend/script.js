@@ -2,6 +2,7 @@ $(document).ready(function () {
   if (localStorage.getItem("token") != null) {
     $("#register").css("display", "none");
     preload();
+    setup();
   } else {
     $("#register").css("display", "block");
   }
