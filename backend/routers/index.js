@@ -19,10 +19,17 @@ router.get("/modal/metadata.json",(req,res)=>{
 res.sendFile(path.resolve(__dirname+"/../modal/metadata.json"));
 });
 
+router.get("/socket.io/socket.io.js",(req,res)=>{
+    var path = require('path');
+res.sendFile(path.resolve(__dirname+"/../socket.io/socket.io.js"));
+});
+
+
 router.get("/modal/weights.bin",(req,res)=>{
     var path = require('path');
 res.sendFile(path.resolve(__dirname+"/../modal/weights.bin"));
 });
+
 
 router.post("/register",async (req,res)=>{
 
@@ -58,14 +65,13 @@ router.post("/register",async (req,res)=>{
 });
 
 
-router.post("/processing",fetchUser,(req,res)=>{
-    const {url} = req.body;
+router.get("/result",fetchUser,(req,res)=>{
     try{
-        res.status(200).send(url);
+        res.status(200).send({val:"DEVELOPED"});
     }
     catch(error){
         console.error(error.message);
-        res.status(500).send("Internal Server Error");
+        res.status(500).send("Intenal Server Error");
     }
 });
 

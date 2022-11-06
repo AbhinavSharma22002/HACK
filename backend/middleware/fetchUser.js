@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const fetchUser = (req,res,next)=>{
-    const token = req.header('auth-token');
+    const token = req.header('authtoken');
     if(!token){
         res.status(401).send({"error":"Please register yourself"});
     }

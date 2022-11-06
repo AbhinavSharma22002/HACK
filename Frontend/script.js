@@ -18,9 +18,8 @@ function setup(){
   setInterval(() => {
     video = createCapture(0);
     video.hide();
-  
     classifyVideo();
-  }, 5000);
+  }, 1000);
 }
 
 function classifyVideo(){
@@ -28,6 +27,22 @@ function classifyVideo(){
 }
 
 function gotResults(error,results){
-  console.log(results);
+  if(results!==undefined && results.length===2){
+    if(results[1].confidence>results[0].confidence){
+      $.ajax({
+        url: "http://localhost:3000/result",
+        type: 'GET',
+        headers: { authtoken: localStorage.getItem('token') },
+        success: function (data) {
+          alert("Help incoming");
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+    }
+  }
+  else
+  console.log("BT ho gyi");
 }
 
