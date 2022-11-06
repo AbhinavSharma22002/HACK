@@ -1,8 +1,6 @@
 $(document).ready(function () {
   if (localStorage.getItem("token") != null) {
     $("#register").css("display", "none");
-    preload();
-    setup();
   } else {
     $("#register").css("display", "block");
   }
@@ -16,11 +14,16 @@ function preload(){
 
 function setup(){
   createCanvas(640,520);
+  
+if (localStorage.getItem("token") != null) {
+  preload();
   setInterval(() => {
     video = createCapture(0);
     video.hide();
     classifyVideo();
   }, 1000);
+  
+}  
 }
 
 function classifyVideo(){
