@@ -18,7 +18,7 @@ let data = {
 
 $.post("http://localhost:3000/register",data).done(function(result){
   localStorage.setItem("token", result.authData);
-  window.location.href = "http://127.0.0.1:5500/HACK/Frontend/"; 
+  window.location.href = "http://127.0.0.1:5500/Frontend/"; 
   }
 ).fail(function(data, textStatus, xhr){
   alert(data.responseJSON.error);

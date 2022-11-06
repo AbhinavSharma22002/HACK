@@ -9,10 +9,21 @@ router.get("/",(req,res)=>{
     res.status(200).send("HELLO world");
 });
 
-router.get("/socket.io/socket.io.js",(req,res)=>{
+router.get("/modal/model.json",(req,res)=>{
     var path = require('path');
-res.sendFile(path.resolve(__dirname+"/../node_modules/socket.io/client-dist/socket.io.js"));
+res.sendFile(path.resolve(__dirname+"/../modal/model.json"));
 });
+
+router.get("/modal/metadata.json",(req,res)=>{
+    var path = require('path');
+res.sendFile(path.resolve(__dirname+"/../modal/metadata.json"));
+});
+
+router.get("/modal/weights.bin",(req,res)=>{
+    var path = require('path');
+res.sendFile(path.resolve(__dirname+"/../modal/weights.bin"));
+});
+
 router.post("/register",async (req,res)=>{
 
     let {name,location,permission,adharcard} = req.body;
