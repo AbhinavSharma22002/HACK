@@ -14,7 +14,7 @@ Once you get register, allow camera to record you and test our model
 
 ![Screenshot (108)](https://user-images.githubusercontent.com/101265586/200155896-5f82e58e-bd85-4c5d-8eca-81ed89845eb3.png)
 
-Now you must have perfomed some actions in front of webcamp to check our model, If you have perfomed some violence then in console it will show that confidence of violence is 
+Now you must have performed some actions in front of webcamp to check our model, If you have perfomed some violence then in console it will show that confidence of violence is 
 greater than confidence of Non-violence. Hence proved our model that it can detect violence and can be used anywhere.
 
 ![imagelast](https://user-images.githubusercontent.com/101265586/200156512-3891ea8f-5dcc-4de4-8f34-16a8ea920895.png)
